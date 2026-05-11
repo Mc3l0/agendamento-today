@@ -960,7 +960,7 @@ const HORARIOS_EMP = {
   'Today Joaquim Távora':{ seg_sex:[9,16],  sabado:[9,12],  domingo:null,    feriado:null,  pausa:[12,13] },
   'Today Moema':         { seg_sex:[9,16],  sabado:[9,12],  domingo:null,    feriado:null },
   'Today Faria Lima':    { seg_sex:[9,17],  sabado:[9,17],  domingo:null,  feriado:null },
-  'Today Vila Olímpia':  { seg_sec:[9,17],  sabado:[9,17],  domingo:null,  feriado:null },
+  'Today Vila Olímpia':  { seg_sex:[9,17],  sabado:[9,17],  domingo:null,  feriado:null },
 };
 
 // Empreendimentos em obras — controla tag de obra, imagem de segurança e status
@@ -1433,7 +1433,7 @@ async function enviarFormulario() {
   const dados = coletarDados();
 
   // Se a URL do script não foi configurada, simular envio
-  if (SHEETS_URL === 'https://script.google.com/macros/s/AKfycbwzXAN3JgR5yaqsRAfbkZOmtB70A2wYEZdlZb9fILVBno-rCP6riT4i45vLgFe9gU3VPg/exec') {
+  if (!SHEETS_URL || SHEETS_URL === 'SUA_URL_DO_GOOGLE_APPS_SCRIPT_AQUI') {
     mostrarSucesso(dados);
     return;
   }
