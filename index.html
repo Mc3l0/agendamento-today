@@ -856,7 +856,7 @@
 // ============================================================
 // CONFIG — EDITE AQUI
 // ============================================================
-const SHEETS_URL = 'SUA_URL_DO_GOOGLE_APPS_SCRIPT_AQUI';
+const SHEETS_URL = 'https://script.google.com/macros/s/AKfycbwzXAN3JgR5yaqsRAfbkZOmtB70A2wYEZdlZb9fILVBno-rCP6riT4i45vLgFe9gU3VPg/exec';
 
 // ============================================================
 // BASE DE CORRETORES
@@ -959,8 +959,8 @@ const HORARIOS_EMP = {
   'Today Saúde':         { seg_sex:[9,16],  sabado:[9,12],  domingo:null,    feriado:null,  pausa:[12,13] },
   'Today Joaquim Távora':{ seg_sex:[9,16],  sabado:[9,12],  domingo:null,    feriado:null,  pausa:[12,13] },
   'Today Moema':         { seg_sex:[9,16],  sabado:[9,12],  domingo:null,    feriado:null },
-  'Today Faria Lima':    { seg_sex:[9,17],  sabado:[9,17],  domingo:[9,12],  feriado:null },
-  'Today Vila Olímpia':  { seg_sec:[9,17],  sabado:[9,17],  domingo:[9,12],  feriado:null },
+  'Today Faria Lima':    { seg_sex:[9,17],  sabado:[9,17],  domingo:null,  feriado:null },
+  'Today Vila Olímpia':  { seg_sec:[9,17],  sabado:[9,17],  domingo:null,  feriado:null },
 };
 
 // Empreendimentos em obras — controla tag de obra, imagem de segurança e status
@@ -982,8 +982,8 @@ const USA_FACIAL = [
 // ============================================================
 const GPS = {
   'Marcelo': { whatsapp: '5511947230291' },
-  'Pajero':  { whatsapp: '5511947230291' }, // trocar pelo número real
-  'Pereira': { whatsapp: '5511947230291' }, // trocar pelo número real
+  'Pajero':  { whatsapp: '5511982021003' }, // trocar pelo número real
+  'Pereira': { whatsapp: '5511982736035' }, // trocar pelo número real
 };
 
 const GP_POR_EMPREENDIMENTO = {
@@ -991,12 +991,12 @@ const GP_POR_EMPREENDIMENTO = {
   'Today Perdizes':       'Marcelo',
   'Today Pompéia':        'Marcelo',
   'Today Tatuapé':        'Marcelo',
-  'Today Vila Mariana':   'Marcelo',
-  'Today Saúde':          'Marcelo',
-  'Today Joaquim Távora': 'Marcelo',
-  'Today Moema':          'Marcelo',
-  'Today Faria Lima':     'Marcelo',
-  'Today Vila Olímpia':   'Marcelo',
+  'Today Vila Mariana':   'Pajero',
+  'Today Saúde':          'Pajero',
+  'Today Joaquim Távora': 'Pajero',
+  'Today Moema':          'Pereira',
+  'Today Faria Lima':     'Pereira',
+  'Today Vila Olímpia':   'Pereira',
 };
 // ============================================================
 
@@ -1433,7 +1433,7 @@ async function enviarFormulario() {
   const dados = coletarDados();
 
   // Se a URL do script não foi configurada, simular envio
-  if (SHEETS_URL === 'SUA_URL_DO_GOOGLE_APPS_SCRIPT_AQUI') {
+  if (SHEETS_URL === 'https://script.google.com/macros/s/AKfycbwzXAN3JgR5yaqsRAfbkZOmtB70A2wYEZdlZb9fILVBno-rCP6riT4i45vLgFe9gU3VPg/exec') {
     mostrarSucesso(dados);
     return;
   }
